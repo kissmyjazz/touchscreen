@@ -1,4 +1,4 @@
-import serial, os, time
+import serial, os, sys, time
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -37,3 +37,4 @@ if ser:
         else:
             print('Please retype your command')
             time.sleep(1)
+sys.exit(0)
