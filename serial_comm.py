@@ -1,4 +1,5 @@
 import serial, os, sys, time
+import serial.tools.list_ports
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
