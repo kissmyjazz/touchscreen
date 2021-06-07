@@ -2,8 +2,12 @@ import serial, os, sys, time
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
+ports = list(serial.tools.list_ports.comports())
+for p in ports:
+    if 'CP210x' in p.description:
+        PORT = p.device
+
 # constants
-PORT = 'COM3'
 BAUD_RATE = 115200
 
 ser = serial.Serial(PORT, BAUD_RATE, timeout = 1)
